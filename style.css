@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap");
 *,
 *::before,
 *::after {
@@ -68,10 +69,23 @@ select {
 }
 body {
   position: relative;
+  font-family: "Be Vietnam Pro", sans-serif;
 }
 
 .flex {
   display: flex;
+}
+
+.spacing-32px {
+  margin-inline: 32px;
+}
+
+.spacing-24px {
+  margin-inline: 24px;
+}
+
+.spacing-16px {
+  margin-inline: 16px;
 }
 
 nav .nav-wrapper {
@@ -169,4 +183,44 @@ body.active {
   content: url(/images/illustration-intro.svg);
   max-width: 318px;
   max-height: 286px;
+}
+
+.background-orange {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #f3603c;
+  height: 50vh;
+  color: white;
+}
+
+footer {
+  padding-top: 51px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  background-color: #1d1e25;
+  height: 100%;
+}
+footer .footer-nav {
+  gap: 6rem;
+  justify-content: center;
+  color: white;
+}
+footer .footer-nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-block: 54px;
+  gap: 1rem;
+}
+footer .social-media-icons {
+  gap: 2rem;
+  margin-bottom: 54px;
+  justify-content: center;
+}
+footer .logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 54px;
 }/*# sourceMappingURL=style.css.map */
