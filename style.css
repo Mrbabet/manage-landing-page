@@ -66,6 +66,10 @@ select {
     scroll-behavior: initial;
   }
 }
+body {
+  position: relative;
+}
+
 nav .nav-wrapper {
   margin: 45px 24px;
   display: flex;
@@ -84,43 +88,81 @@ nav .nav-desktop .active {
 nav .nav-mobile {
   display: none;
 }
-nav .burger-btn {
+nav .nav-mobile.active {
+  display: block;
+  position: absolute;
+  top: 103px;
+  display: flex;
+  justify-content: center;
+  padding-block: 40px;
+  background-color: white;
+  width: 90%;
+  height: 291px;
+  box-shadow: 0px 10px 20px rgba(80, 86, 98, 0.03);
+  border-radius: 4px;
+}
+nav .nav-mobile.active ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+  font-weight: bold;
+}
+
+body.active {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.33%, rgba(0, 0, 0, 0.599049) 99.79%);
+}
+
+.burger-btn {
   width: 40px;
   height: 40px;
   background-color: transparent;
   outline: 0;
   border: 0;
 }
-nav .burger-btn .burger-bars,
-nav .burger-btn .burger-bars:after,
-nav .burger-btn .burger-bars::before {
+.burger-btn .burger-bars,
+.burger-btn .burger-bars:after,
+.burger-btn .burger-bars::before {
   position: relative;
   width: 100%;
   height: 3px;
   background-color: black;
   border-radius: 50px;
 }
-nav .burger-btn .burger-bars:after,
-nav .burger-btn .burger-bars::before {
+.burger-btn .burger-bars:after,
+.burger-btn .burger-bars::before {
   content: "";
   position: absolute;
   left: 0;
   transition: transform ease-in-out 220ms;
 }
-nav .burger-btn .burger-bars:after {
+.burger-btn .burger-bars:after {
   transform: translateY(-6px);
 }
-nav .burger-btn .burger-bars::before {
+.burger-btn .burger-bars::before {
   transform: translateY(6px);
 }
-nav .burger-btn .burger-bars.active {
+.burger-btn .burger-bars.active {
   transform: translateX(-50px);
   background: transparent;
   box-shadow: none;
 }
-nav .burger-btn .burger-bars.active::before {
+.burger-btn .burger-bars.active::before {
   transform: rotate(45deg) translate(35px, -35px);
 }
-nav .burger-btn .burger-bars.active::after {
+.burger-btn .burger-bars.active::after {
   transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ilustration-intro {
+  content: url(/images/illustration-intro.svg);
+  max-width: 318px;
+  max-height: 286px;
 }/*# sourceMappingURL=style.css.map */
