@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  html {
+    scroll-behavior: initial;
+  }
+}
+nav .nav-wrapper {
+  margin: 45px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .nav-desktop {
+  display: none;
+}
+nav .nav-desktop .active {
+  display: none;
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+nav .nav-mobile {
+  display: none;
+}
+nav .burger-btn {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+}
+nav .burger-btn .burger-bars,
+nav .burger-btn .burger-bars:after,
+nav .burger-btn .burger-bars::before {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  border-radius: 50px;
+}
+nav .burger-btn .burger-bars:after,
+nav .burger-btn .burger-bars::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: transform ease-in-out 220ms;
+}
+nav .burger-btn .burger-bars:after {
+  transform: translateY(-6px);
+}
+nav .burger-btn .burger-bars::before {
+  transform: translateY(6px);
+}
+nav .burger-btn .burger-bars.active {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+nav .burger-btn .burger-bars.active::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+nav .burger-btn .burger-bars.active::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}/*# sourceMappingURL=style.css.map */
