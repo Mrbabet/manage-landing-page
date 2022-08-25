@@ -70,6 +70,10 @@ body {
   position: relative;
 }
 
+.flex {
+  display: flex;
+}
+
 nav .nav-wrapper {
   margin: 45px 24px;
   display: flex;
