@@ -71,6 +71,12 @@ body {
   position: relative;
   font-family: "Be Vietnam Pro", sans-serif;
 }
+body .nav-logo {
+  display: none;
+}
+body .standard-logo {
+  display: block;
+}
 
 .flex {
   display: flex;
@@ -110,12 +116,14 @@ nav .nav-mobile.active {
   display: block;
   position: absolute;
   top: 103px;
+  left: 0;
   display: flex;
   justify-content: center;
-  padding-block: 40px;
-  background-color: white;
-  width: 90%;
-  height: 291px;
+  padding-top: 100px;
+  background-color: black;
+  color: white;
+  width: 100vw;
+  height: 100vh;
   box-shadow: 0px 10px 20px rgba(80, 86, 98, 0.03);
   border-radius: 4px;
 }
@@ -125,12 +133,20 @@ nav .nav-mobile.active ul {
   gap: 1.5rem;
   list-style: none;
   font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
 
 body.active {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.33%, rgba(0, 0, 0, 0.599049) 99.79%);
   overflow-y: hidden;
   height: 100vh;
+  background-color: black;
+}
+body.active .nav-logo {
+  display: block;
+}
+body.active .standard-logo {
+  display: none;
 }
 
 .burger-btn {
@@ -169,9 +185,11 @@ body.active {
 }
 .burger-btn .burger-bars.active::before {
   transform: rotate(45deg) translate(35px, -35px);
+  background-color: white;
 }
 .burger-btn .burger-bars.active::after {
   transform: rotate(-45deg) translate(35px, 35px);
+  background-color: white;
 }
 
 .hero {
