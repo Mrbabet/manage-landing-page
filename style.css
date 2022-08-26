@@ -129,6 +129,8 @@ nav .nav-mobile.active ul {
 
 body.active {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.33%, rgba(0, 0, 0, 0.599049) 99.79%);
+  overflow-y: hidden;
+  height: 100vh;
 }
 
 .burger-btn {
