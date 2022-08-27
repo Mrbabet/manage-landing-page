@@ -294,6 +294,8 @@ body.active {
   }
   .button-container {
     margin-bottom: 42px;
+    display: flex;
+    justify-content: center;
   }
   .carousel-slide {
     margin-top: 62px;
@@ -376,6 +378,13 @@ footer {
   justify-content: center;
   background-color: #1d1e25;
   height: 100%;
+
+  .footer-wrapper {
+    .logo-sc {
+      display: flex;
+      flex-direction: column;
+    }
+  }
   p {
     text-align: center;
     color: white;
@@ -430,6 +439,7 @@ footer {
   }
   nav {
     .nav-wrapper {
+      margin: 0;
       margin-top: 56px;
       display: flex;
       justify-content: space-between;
@@ -509,23 +519,5 @@ footer {
   }
 
   footer {
-    padding-block: 62px;
-
-    background-color: #1d1e25;
-    height: 100%;
-    p {
-      text-align: center;
-      color: white;
-      opacity: 0.5;
-    }
-
-    input {
-      padding-block: 12px;
-      padding-inline: 32px;
-      border-radius: 99vh;
-      background-color: white;
-      border: 0;
-      outline: 0;
-    }
   }
 }
