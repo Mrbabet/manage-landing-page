@@ -414,9 +414,18 @@ footer .logo {
   margin-bottom: 54px;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1400px) {
   .burger-btn {
     display: none;
+  }
+  .spacing-165px {
+    margin-inline: 165px;
+  }
+  nav .nav-wrapper {
+    margin-top: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   nav .nav-desktop-button {
     display: block;
@@ -436,6 +445,7 @@ footer .logo {
     max-height: 485px;
   }
   .hero .hero-text {
+    max-width: 400px;
     text-align: left;
     align-items: flex-start;
     gap: 1rem;
@@ -453,5 +463,52 @@ footer .logo {
     color: #242d52;
     opacity: 0.5;
     margin-bottom: 29px;
+  }
+  .difference {
+    display: flex;
+    gap: 8rem;
+    display: flex;
+    flex-direction: row;
+  }
+  .difference .difference-main {
+    text-align: left;
+    margin: 0;
+  }
+  .difference .difference-main p {
+    margin: 0;
+  }
+  .carousel-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .carousel-container .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  .background-orange .flex {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .background-orange .flex h2 {
+    width: 445px;
+    text-align: left;
+  }
+  footer {
+    padding-block: 62px;
+    background-color: #1d1e25;
+    height: 100%;
+  }
+  footer p {
+    text-align: center;
+    color: white;
+    opacity: 0.5;
+  }
+  footer input {
+    padding-block: 12px;
+    padding-inline: 32px;
+    border-radius: 99vh;
+    background-color: white;
+    border: 0;
+    outline: 0;
   }
 }/*# sourceMappingURL=style.css.map */

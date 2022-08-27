@@ -421,11 +421,20 @@ footer {
 
 // Media queries
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1400px) {
   .burger-btn {
     display: none;
   }
+  .spacing-165px {
+    margin-inline: 165px;
+  }
   nav {
+    .nav-wrapper {
+      margin-top: 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
     .nav-desktop-button {
       display: block;
     }
@@ -435,6 +444,7 @@ footer {
       gap: 2rem;
     }
   }
+
   .hero {
     flex-direction: row-reverse;
     gap: 9rem;
@@ -445,6 +455,7 @@ footer {
       max-height: 485px;
     }
     .hero-text {
+      max-width: 400px;
       text-align: left;
       align-items: flex-start;
       gap: 1rem;
@@ -463,6 +474,58 @@ footer {
         opacity: 0.5;
         margin-bottom: 29px;
       }
+    }
+  }
+  .difference {
+    display: flex;
+    gap: 8rem;
+    .difference-main {
+      text-align: left;
+      margin: 0;
+      p {
+        margin: 0;
+      }
+    }
+    display: flex;
+    flex-direction: row;
+  }
+  .carousel-container {
+    display: flex;
+    flex-direction: column;
+    .button-container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .background-orange {
+    .flex {
+      flex-direction: row;
+      justify-content: space-between;
+      h2 {
+        width: 445px;
+        text-align: left;
+      }
+    }
+  }
+
+  footer {
+    padding-block: 62px;
+
+    background-color: #1d1e25;
+    height: 100%;
+    p {
+      text-align: center;
+      color: white;
+      opacity: 0.5;
+    }
+
+    input {
+      padding-block: 12px;
+      padding-inline: 32px;
+      border-radius: 99vh;
+      background-color: white;
+      border: 0;
+      outline: 0;
     }
   }
 }
