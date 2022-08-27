@@ -78,6 +78,16 @@ body .standard-logo {
   display: block;
 }
 
+button {
+  padding-block: 12px;
+  padding-inline: 32px;
+  border-radius: 99vh;
+  background-color: #f3603c;
+  border: 0;
+  outline: 0;
+  color: white;
+}
+
 .flex {
   display: flex;
 }
@@ -92,6 +102,14 @@ body .standard-logo {
 
 .spacing-16px {
   margin-inline: 16px;
+}
+
+.left-spacing-16px {
+  margin-left: 16px;
+}
+
+.right-spacing-16px {
+  margin-right: 16px;
 }
 
 nav .nav-wrapper {
@@ -198,11 +216,101 @@ body.active .standard-logo {
   flex-direction: column;
   align-items: center;
 }
-
-.ilustration-intro {
+.hero .ilustration-intro {
   content: url(/images/illustration-intro.svg);
   max-width: 318px;
   max-height: 286px;
+}
+.hero .hero-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero .hero-text h1 {
+  font-size: 36px;
+  line-height: 125%;
+}
+.hero .hero-text p {
+  margin: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #242d52;
+  opacity: 0.5;
+}
+
+.difference {
+  margin-top: 93px;
+}
+.difference .difference-main {
+  text-align: center;
+}
+.difference .difference-article p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 200%;
+  color: #242d52;
+  opacity: 0.5;
+}
+.difference .difference-article .flex {
+  align-items: center;
+  background-color: #fff0ec;
+  border-radius: 99vh 0px 0px 99vh;
+  gap: 1rem;
+}
+.difference .difference-article .flex h3 {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #242d52;
+}
+.difference .difference-article .flex span {
+  padding: 8px 24px 8px 24px;
+  background-color: #f3603c;
+  border-radius: 99vh;
+  color: white;
+}
+
+.carousel-container {
+  margin-top: 62px;
+}
+.carousel-container h2 {
+  text-align: center;
+}
+.carousel-container .button-container {
+  margin-bottom: 42px;
+}
+.carousel-container .carousel-slide {
+  margin-top: 62px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+  text-align: center;
+}
+.carousel-container .carousel-slide img {
+  width: 72px;
+  height: 72px;
+  transform: translate(0%, -50%);
+}
+.carousel-container .carousel-slide .carousel-text {
+  padding-inline: 21px;
+  padding-bottom: 42px;
+}
+
+.mobile-carousel-indicator {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 26px;
+  margin-bottom: 42px;
+}
+.mobile-carousel-indicator .dot {
+  height: 7px;
+  width: 7px;
+  border: 1px solid #f3603c;
+  border-radius: 50%;
 }
 
 .background-orange {
@@ -213,6 +321,21 @@ body.active .standard-logo {
   height: 50vh;
   color: white;
 }
+.background-orange .flex {
+  flex-direction: column;
+  gap: 29px;
+  justify-content: center;
+  align-items: center;
+}
+.background-orange button {
+  padding-block: 12px;
+  padding-inline: 32px;
+  border-radius: 99vh;
+  background-color: white;
+  border: 0;
+  outline: 0;
+  color: #f3603c;
+}
 
 footer {
   padding-top: 51px;
@@ -221,6 +344,23 @@ footer {
   justify-content: center;
   background-color: #1d1e25;
   height: 100%;
+}
+footer p {
+  text-align: center;
+  color: white;
+  opacity: 0.5;
+}
+footer .submit {
+  display: flex;
+  gap: 8px;
+}
+footer .submit input {
+  padding-block: 12px;
+  padding-inline: 32px;
+  border-radius: 99vh;
+  background-color: white;
+  border: 0;
+  outline: 0;
 }
 footer .footer-nav {
   gap: 6rem;
