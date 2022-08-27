@@ -77,7 +77,7 @@ body {
     display: block;
   }
 }
-button {
+.button {
   padding-block: 12px;
   padding-inline: 32px;
   border-radius: 99vh;
@@ -113,15 +113,11 @@ nav {
     justify-content: space-between;
     align-items: center;
   }
-  .nav-desktop {
+  .nav-desktop-button {
     display: none;
   }
-  .nav-desktop .active {
+  .nav-desktop {
     display: none;
-    display: flex;
-    gap: 1rem;
-
-    list-style: none;
   }
   .nav-mobile {
     display: none;
@@ -138,10 +134,7 @@ nav {
     color: white;
     width: 100vw;
     height: 100vh;
-    // width: 90%;
-    // height: 300px;
-    box-shadow: 0px 10px 20px rgba(80, 86, 98, 0.03);
-    border-radius: 4px;
+    z-index: 100;
     ul {
       display: flex;
       flex-direction: column;
@@ -234,9 +227,10 @@ body.active {
       margin: 16px;
       font-size: 14px;
       font-weight: 400;
-      line-height: 28px;
+      line-height: 200%;
       color: #242d52;
       opacity: 0.5;
+      margin-bottom: 29px;
     }
   }
 }
@@ -244,7 +238,20 @@ body.active {
 .difference {
   margin-top: 93px;
   .difference-main {
+    margin-bottom: 54px;
     text-align: center;
+    h2 {
+      font-size: 30px;
+      line-height: 150%;
+    }
+    p {
+      margin: 16px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 200%;
+      color: #242d52;
+      opacity: 0.5;
+    }
   }
   .difference-article {
     p {
@@ -280,6 +287,10 @@ body.active {
   margin-top: 62px;
   h2 {
     text-align: center;
+    font-size: 32px;
+    line-height: 150%;
+    font-weight: 700;
+    color: #242d52;
   }
   .button-container {
     margin-bottom: 42px;
@@ -300,6 +311,16 @@ body.active {
     .carousel-text {
       padding-inline: 21px;
       padding-bottom: 42px;
+      h4 {
+        font-size: 16px;
+        line-height: 23px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 200%;
+        color: #242d52;
+        opacity: 0.5;
+      }
     }
   }
 }
@@ -325,6 +346,12 @@ body.active {
   background-color: #f3603c;
   height: 50vh;
   color: white;
+
+  h2 {
+    font-size: 36px;
+    line-height: 125%;
+    font-weight: 700;
+  }
   .flex {
     flex-direction: column;
     gap: 29px;
@@ -389,5 +416,53 @@ footer {
     display: flex;
     justify-content: center;
     margin-bottom: 54px;
+  }
+}
+
+// Media queries
+
+@media screen and (min-width: 1000px) {
+  .burger-btn {
+    display: none;
+  }
+  nav {
+    .nav-desktop-button {
+      display: block;
+    }
+    .nav-desktop {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+  }
+  .hero {
+    flex-direction: row-reverse;
+    gap: 9rem;
+
+    .ilustration-intro {
+      content: url(/images/illustration-intro.svg);
+      max-width: 540px;
+      max-height: 485px;
+    }
+    .hero-text {
+      text-align: left;
+      align-items: flex-start;
+      gap: 1rem;
+
+      h1 {
+        font-size: 36px;
+        line-height: 125%;
+      }
+      p {
+        max-width: 350px;
+        margin: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 200%;
+        color: #242d52;
+        opacity: 0.5;
+        margin-bottom: 29px;
+      }
+    }
   }
 }
