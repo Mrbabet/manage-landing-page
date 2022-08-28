@@ -810,4 +810,43 @@ footer .footer-wrapper .logo-sc .social-media-icons {
     flex-direction: column;
     justify-content: space-around;
   }
+}
+@media screen and (min-width: 950px) {
+  nav button:hover {
+    background-color: #f98f75;
+    color: #fcf6f5;
+  }
+  nav li:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  .hero button:hover {
+    background-color: #f98f75;
+    color: #fcf6f5;
+    cursor: pointer;
+  }
+  .carousel-container button:hover {
+    background-color: #f98f75;
+    color: #fcf6f5;
+    cursor: pointer;
+  }
+  .background-orange button:hover {
+    color: rgba(243, 97, 60, 0.5215686275);
+    cursor: pointer;
+  }
+  footer button:hover {
+    background-color: #f98f75;
+    color: #fcf6f5;
+    cursor: pointer;
+  }
+  footer li:hover {
+    color: #f3603c;
+    cursor: pointer;
+  }
+  footer .icon:hover {
+    cursor: pointer;
+  }
+  footer .icon:hover path:hover {
+    fill: #f3603c;
+  }
 }/*# sourceMappingURL=style.css.map */
