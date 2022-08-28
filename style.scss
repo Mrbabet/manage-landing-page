@@ -139,10 +139,14 @@ body.active {
     display: none;
   }
 }
+body.active::before {
+  background-image: none;
+}
 
 // Nav
 
 nav {
+  z-index: 100;
   .nav-wrapper {
     margin: 45px 24px;
     display: flex;
@@ -372,6 +376,12 @@ nav {
     width: 7px;
     border: 1px solid #f3603c;
     border-radius: 50%;
+  }
+}
+
+.mobile-carousel-indicator.current-slide {
+  .dot {
+    background-color: #f3603c;
   }
 }
 
