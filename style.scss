@@ -67,29 +67,9 @@ select {
     scroll-behavior: initial;
   }
 }
-body {
-  position: relative;
-  font-family: "Be Vietnam Pro", sans-serif;
-  .nav-logo {
-    display: none;
-  }
-  .standard-logo {
-    display: block;
-  }
-}
-.button {
-  padding-block: 12px;
-  padding-inline: 32px;
-  border-radius: 99vh;
-  background-color: #f3603c;
-  border: 0;
-  outline: 0;
-  color: white;
-}
 
-.flex {
-  display: flex;
-}
+// utility
+
 .spacing-32px {
   margin-inline: 32px;
 }
@@ -105,6 +85,62 @@ body {
 .right-spacing-16px {
   margin-right: 16px;
 }
+.flex {
+  display: flex;
+}
+
+// button-config
+
+.button {
+  padding-block: 12px;
+  padding-inline: 32px;
+  border-radius: 99vh;
+  background-color: #f3603c;
+  border: 0;
+  outline: 0;
+  color: white;
+}
+
+// body
+
+body {
+  position: relative;
+  font-family: "Be Vietnam Pro", sans-serif;
+  .nav-logo {
+    display: none;
+  }
+  .standard-logo {
+    display: block;
+  }
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url(/images/bg-tablet-pattern.svg),
+    url(/images/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  opacity: 1;
+  background-position: -50% 45%, 150% -10%;
+  overflow: hidden;
+}
+
+body.active {
+  overflow-y: hidden;
+  height: 100vh;
+  background-color: black;
+
+  .nav-logo {
+    display: block;
+  }
+  .standard-logo {
+    display: none;
+  }
+}
+
+// Nav
 
 nav {
   .nav-wrapper {
@@ -146,18 +182,8 @@ nav {
     }
   }
 }
-body.active {
-  overflow-y: hidden;
-  height: 100vh;
-  background-color: black;
 
-  .nav-logo {
-    display: block;
-  }
-  .standard-logo {
-    display: none;
-  }
-}
+// Burger-btn
 
 .burger-btn {
   width: 40px;
@@ -202,6 +228,9 @@ body.active {
     background-color: white;
   }
 }
+
+// Hero
+
 .hero {
   display: flex;
   justify-content: center;
@@ -234,6 +263,8 @@ body.active {
     }
   }
 }
+
+// Difference
 
 .difference {
   margin-top: 93px;
@@ -283,6 +314,9 @@ body.active {
     }
   }
 }
+
+// Carousel
+
 .carousel-container {
   margin-top: 62px;
   h2 {
@@ -341,13 +375,17 @@ body.active {
   }
 }
 
+//background-orange
+
 .background-orange {
   flex-direction: column;
   justify-content: center;
   text-align: center;
   background-color: #f3603c;
-  height: 50vh;
+  height: 40vh;
   color: white;
+  position: relative;
+  isolation: isolate;
 
   h2 {
     font-size: 36px;
@@ -371,6 +409,20 @@ body.active {
     color: #f3603c;
   }
 }
+.background-orange::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url(/images/bg-tablet-pattern.svg),
+    url(/images/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  background-position: -15rem -5rem, 80rem -42rem;
+}
+
+// footer
+
 footer {
   padding-top: 51px;
   padding-bottom: 30px;
@@ -380,6 +432,11 @@ footer {
   height: 100%;
 
   .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    .copyright-desktop {
+      display: none;
+    }
     .logo-sc {
       display: flex;
       flex-direction: column;
@@ -429,12 +486,286 @@ footer {
 }
 
 // Media queries
+// Breakpoint 950px
+
+@media screen and (min-width: 950px) {
+  .spacing {
+    margin-inline: 40px;
+  }
+
+  .burger-btn {
+    display: none;
+  }
+
+  nav {
+    .nav-wrapper {
+      margin: 0;
+      margin-top: 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-desktop-button {
+      display: block;
+    }
+    .nav-desktop {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+  }
+
+  .hero {
+    margin-top: 2em;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 3rem;
+
+    .ilustration-intro {
+      content: url(/images/illustration-intro.svg);
+      max-width: 450px;
+      max-height: 400px;
+    }
+    .hero-text {
+      max-width: 400px;
+      text-align: left;
+      align-items: flex-start;
+      gap: 1rem;
+
+      h1 {
+        font-size: 36px;
+        line-height: 125%;
+      }
+      p {
+        max-width: 350px;
+        margin: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 200%;
+        color: #242d52;
+        opacity: 0.5;
+        margin-bottom: 29px;
+      }
+    }
+  }
+  .difference {
+    margin-top: 45px;
+    .difference-main {
+      margin-bottom: 54px;
+      text-align: center;
+      h2 {
+        font-size: 30px;
+        line-height: 150%;
+      }
+      p {
+        margin: 16px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 200%;
+        color: #242d52;
+        opacity: 0.5;
+      }
+    }
+    .difference-article-container {
+      display: flex;
+    }
+    .difference-article {
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 200%;
+        color: #242d52;
+        opacity: 0.5;
+        flex-basis: 33.3%;
+      }
+      .flex {
+        align-items: center;
+        background-color: #fff0ec;
+        border-radius: 99vh 0px 0px 99vh;
+        gap: 1rem;
+
+        h3 {
+          font-size: 14.5px;
+          font-weight: 700;
+          color: #242d52;
+        }
+
+        span {
+          padding: 8px 24px 8px 24px;
+          background-color: #f3603c;
+          border-radius: 99vh;
+
+          color: white;
+        }
+      }
+    }
+  }
+
+  footer {
+    .copyright-mobile {
+      display: none;
+    }
+    .footer-wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 100px;
+      .copyright-desktop {
+        display: block;
+      }
+
+      .logo-sc {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        .logo,
+        .social-media-icons {
+          margin: 0;
+        }
+      }
+      .submit-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
+// Breakpoint 1150px
+
+@media screen and (min-width: 1150px) {
+  .spacing {
+    margin-inline: 80px;
+  }
+
+  .burger-btn {
+    display: none;
+  }
+
+  nav {
+    .nav-wrapper {
+      margin: 0;
+      margin-top: 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-desktop-button {
+      display: block;
+    }
+    .nav-desktop {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+  }
+
+  .hero {
+    margin-top: 3rem;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 9rem;
+
+    .ilustration-intro {
+      content: url(/images/illustration-intro.svg);
+      max-width: 540px;
+      max-height: 485px;
+    }
+    .hero-text {
+      max-width: 400px;
+      text-align: left;
+      align-items: flex-start;
+      gap: 1rem;
+
+      h1 {
+        font-size: 36px;
+        line-height: 125%;
+      }
+      p {
+        max-width: 350px;
+        margin: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 200%;
+        color: #242d52;
+        opacity: 0.5;
+        margin-bottom: 29px;
+      }
+    }
+  }
+
+  .difference-article-container {
+    display: flex;
+    flex-direction: row;
+
+    .difference-article {
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 200%;
+        color: #242d52;
+        opacity: 0.5;
+        flex-basis: 33.3%;
+      }
+      .flex {
+        align-items: center;
+        background-color: transparent;
+        border-radius: 99vh 0px 0px 99vh;
+        gap: 1rem;
+
+        h3 {
+          font-size: 14.5px;
+          font-weight: 700;
+          color: #242d52;
+        }
+
+        span {
+          padding: 8px 24px 8px 24px;
+          background-color: #f3603c;
+          border-radius: 99vh;
+
+          color: white;
+        }
+      }
+    }
+  }
+  footer {
+    .copyright-mobile {
+      display: none;
+    }
+    .footer-wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 100px;
+      .copyright-desktop {
+        display: block;
+      }
+
+      .logo-sc {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        .logo,
+        .social-media-icons {
+          margin: 0;
+        }
+      }
+      .submit-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
+// Breakpoint 1400px
 
 @media screen and (min-width: 1400px) {
   .burger-btn {
     display: none;
   }
-  .spacing-165px {
+  .spacing {
     margin-inline: 165px;
   }
   nav {
@@ -456,6 +787,7 @@ footer {
   }
 
   .hero {
+    margin-top: 5rem;
     flex-direction: row-reverse;
     gap: 9rem;
 
@@ -486,6 +818,11 @@ footer {
       }
     }
   }
+
+  .difference-article-container {
+    display: flex;
+    flex-direction: column;
+  }
   .difference {
     display: flex;
     gap: 8rem;
@@ -507,6 +844,11 @@ footer {
       justify-content: center;
     }
   }
+
+  .mobile-carousel-indicator {
+    display: none;
+  }
+
   .background-orange {
     .flex {
       flex-direction: row;
@@ -519,5 +861,31 @@ footer {
   }
 
   footer {
+    .copyright-mobile {
+      display: none;
+    }
+    .footer-wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 100px;
+      .copyright-desktop {
+        display: block;
+      }
+
+      .logo-sc {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        .logo,
+        .social-media-icons {
+          margin: 0;
+        }
+      }
+      .submit-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+    }
   }
 }
